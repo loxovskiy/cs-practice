@@ -19,5 +19,5 @@ for i in range(n):
 print(n)
 print(ErN)
 print(maxN)
-print(mr)
+print(f'{mr:.1f}')
 print(f'{(float(sm) / (n-ErN)):.1f}')
