@@ -16,3 +16,8 @@ for i in range(n):
             mr = st
         if float(st) > mx:
             maxN += 1
+print(n)
+print(ErN)
+print(maxN)
+print(mr)
+print(f'{float(sm) / (n-ErN)):.1f}')
