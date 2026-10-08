@@ -19,9 +19,8 @@ def average(scores):
         return 0.0
 
 def ranking(names, scores):
-
     a = []
-    newlist = sorted(range(len(scores)), key = lambda index:scores[index, reverse = True])
+    newlist = sorted(range(len(scores)), key = lambda index:scores[index], reverse = True])
     for i in newlist:
         a.append(names[i])
     return a
