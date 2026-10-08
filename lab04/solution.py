@@ -1,5 +1,3 @@
-names =  ["Аня", "Боря", "Вика"]
-scores = [7.0,   9.0,    9.0]
 
 def winner(names, scores):
     max = -200.0
@@ -17,19 +15,28 @@ def average(names, scores):
         for i in range(len(scores)):
             sumsc += scores[i]
         srrez = sumsc / len(scores)
-    return f'{srrez:.2f}'
+    return round(srrez, 2)
     if len(scores) == 0:
         return null
 
-#def ranking(names, scores)
-# scores[:i] + scores[i:]
+def ranking(names, scores):
+
+    zipped = zip(scores, names)
+    sort = sorted(zipped, reverse = True)
+    tupl = zip(*sort)
+    scores_sort, names_sort = [list(x) for x in tupl]
+    return names_sort
+
+
 def above_average(names, scores):
+    morsr = []
     for i in range(len(scores)):
         if scores[i] > average(names, scores):
-            return names[i]
-
+            morsr.append(names[i])
+    return morsr
 
 
 print(f'Победитель - {winner(names, scores)}')
 print(f'Средний результат - {average(names, scores)}')
+print(f'Имена по убыванию - {ranking(names, scores)}')
 print(f'Выше среднего - {above_average(names, scores)}')
