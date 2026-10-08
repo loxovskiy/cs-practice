@@ -34,9 +34,3 @@ def above_average(names, scores):
         if scores[i] > average(names, scores):
             morsr.append(names[i])
     return morsr
-
-
-print(f'Победитель - {winner(names, scores)}')
-print(f'Средний результат - {average(names, scores)}')
-print(f'Имена по убыванию - {ranking(names, scores)}')
-print(f'Выше среднего - {above_average(names, scores)}')
