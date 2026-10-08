@@ -8,7 +8,7 @@ def winner(names, scores):
             winname = names[i]
     return winname
 
-def average(names, scores):
+def average(scores):
     null = 0.0
     sumsc = 0.0
     if len(scores) > 0:
