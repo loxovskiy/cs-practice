@@ -9,7 +9,6 @@ def winner(names, scores):
     return winname
 
 def average(scores):
-    null = 0.0
     sumsc = 0.0
     if len(scores) > 0:
         for i in range(len(scores)):
@@ -17,15 +16,16 @@ def average(scores):
         srrez = sumsc / len(scores)
     return round(srrez, 2)
     if len(scores) == 0:
-        return null
+        return 0.0
 
 def ranking(names, scores):
 
-    zipped = zip(scores, names)
-    sort = sorted(zipped, reverse = True)
-    tupl = zip(*sort)
-    scores_sort, names_sort = [list(x) for x in tupl]
-    return names_sort
+    a = []
+    newlist = sorted(range(len(scores)), key = lambda index:scores[index, reverse = True])
+    for i in newlist:
+        a.append(names[i])
+    return a
+
 
 
 def above_average(names, scores):
