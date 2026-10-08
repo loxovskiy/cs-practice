@@ -31,6 +31,6 @@ def ranking(names, scores):
 def above_average(names, scores):
     morsr = []
     for i in range(len(scores)):
-        if scores[i] > average(names, scores):
+        if scores[i] > average(scores):
             morsr.append(names[i])
     return morsr
