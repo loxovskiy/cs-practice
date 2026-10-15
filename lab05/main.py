@@ -1,4 +1,3 @@
-import csv
 
 from tablestats import *
 

@@ -22,3 +22,16 @@ def read_rows(lines):
         rows.append(row_dict)
 
     return rows
+
+def count_types(rows):
+    launch = 0
+    error = 0
+    types = {}
+    for row in rows:
+        if row['тип'] == 'запуск':
+            launch += 1
+        if row['тип'] == 'ошибка':
+            error += 1
+
+
+
