@@ -5,9 +5,6 @@ with open('events.csv', mode='r', encoding='utf-8', newline='') as f:
 
     print(read_rows(f))
 
-from tablestats import *
-
-
 def main():
 
     with open(input(), encoding="utf-8") as table:
