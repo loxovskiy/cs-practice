@@ -10,8 +10,8 @@ def unique_sorted(values):
 
 def common(first, second):
     common = set(first) & set(second)
-    return common
+    return sorted(list(common))
 
 def only_in_first(first, second):
     only_in_first = set(first) - set(second)
-    return only_in_first
+    return sorted(list(only_in_first))
