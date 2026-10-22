@@ -1,8 +1,8 @@
 def count_items(values:  list) -> dict:
     count_dict = {}
     for value in values:
-        counts_dict[value] = counts_dict.get(value, 0) + 1
-    return counts_dict
+        count_dict[value] = count_dict.get(value, 0) + 1
+    return count_dict
 
 def unique_sorted(values):
     unique = sorted(list(set(values)))
