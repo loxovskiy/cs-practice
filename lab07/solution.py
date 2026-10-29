@@ -14,13 +14,17 @@ def reshape_rows(values, width):
 
     return newarr.reshape(-1, width)
 
- def block(matrix, rows, columns):
+def block(matrix, rows, columns):
      matrixx = np.asarray(matrix)
      return matrixx[np.ix_(rows, columns)]
 
-# def column_means(matrix):
-#     pass
-#
+def column_means(matrix):
+     if not matrix:
+         return []
+     array = np.asarray(matrix)
+
+     return np.round(np.mean(array, axis = 0), 6)
+
 # def column_range(matrix, column):
 #     pass
 
