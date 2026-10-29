@@ -3,8 +3,8 @@ import numpy as np
 def reshape_rows(values, width):
     newarr = np.asarray(values)
     
-    if len(values) % width != 0:
-        return np.empty((0, width))
+    if len(values) % width != 0 or width <= 0:
+        return []
 
     return newarr.reshape(-1, width).tolist()
 
@@ -24,5 +24,5 @@ def column_range(matrix, column):
         return []
     array = np.asarray(matrix)
     values = array[:, column]
-    return float(np.round(values.max() - values.min(), 6)).tolist()
+    return float(np.round(values.max() - values.min(), 6))
 
