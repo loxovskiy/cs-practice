@@ -1,31 +1,28 @@
 import numpy as np
-matrix = (np.array
-        ([[1, 2, 3],
-          [4, 5, 6],
-          [7, 8, 9]]))
 
-rows = [0, 2]
-columns = [1, 2]
 def reshape_rows(values, width):
     newarr = np.asarray(values)
     
     if len(values) % width != 0:
         return np.empty((0, width))
 
-    return newarr.reshape(-1, width)
+    return newarr.reshape(-1, width).tolist()
 
 def block(matrix, rows, columns):
      matrixx = np.asarray(matrix)
-     return matrixx[np.ix_(rows, columns)]
+     return matrixx[np.ix_(rows, columns)].tolist()
 
 def column_means(matrix):
      if not matrix:
          return []
      array = np.asarray(matrix)
 
-     return np.round(np.mean(array, axis = 0), 6)
+     return np.round(np.mean(array, axis = 0), 6).tolist()
 
-# def column_range(matrix, column):
-#     pass
+def column_range(matrix, column):
+    if not matrix:
+        return []
+    array = np.asarray(matrix)
+    values = array[:, column]
+    return float(np.round(values.max() - values.min(), 6)).tolist()
 
-print(matrix[np.ix_(rows, columns)])
