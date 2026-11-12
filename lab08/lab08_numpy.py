@@ -43,3 +43,10 @@ print(matrix[1:4, 2:5])
 print(matrix[1:4, 2:5].shape)
 print(matrix[-2: , -2:])
 print(matrix[-2: , -2:].shape)
+
+vector = np.array([10, 20, 30, 40, 50])
+vector[1:4] = 0
+
+small_matrix = np.arange(1, 10).reshape(3, 3)
+small_matrix[0, :] = -1
+small_matrix[1:, 1:] = 9
