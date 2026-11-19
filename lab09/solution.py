@@ -7,6 +7,7 @@ def make_hours() -> list[int]:
 values = make_hours()
 
 def vector_report(values: list[float]) -> dict:
+    values = np.array(values, dtype = float)
     third = values[2]
     last = values[-1]
     cut = values[2:6]
