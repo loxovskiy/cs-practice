@@ -7,19 +7,19 @@ def make_hours() -> list[int]:
 values = make_hours()
 
 def vector_report(values: list[float]) -> dict:
-    values = np.array(values, dtype = float)
-    third = values[2]
-    last = values[-1]
-    middle = values[2:6]
-    every_second = values[::2].tolist()
-    reversed = values[::-1].tolist()
+    arr = np.array(values, dtype = float)
+    third = arr[2]
+    last = arr[-1]
+    middle = arr[2:6].tolist()
+    every_second = arr[::2].tolist()
+    reversed = arr[::-1].tolist()
     return {'third': third,'last': last, 'middle': middle, 'every_second': every_second, 'reversed': reversed}
 
 def change_vector(values: list[float]) -> list[float]:
     copy_values = values.copy()
     for i in range(2, 4):
         copy_values[i] = 99
-    for i in range(1, len(values), 2):
+    for i in range(0, len(values), 2):
         copy_values[i] = -1
     return copy_values
 
