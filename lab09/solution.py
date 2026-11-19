@@ -22,5 +22,17 @@ def change_vector(values: list[float]) -> list[float]:
         copy_values[i] = -1
     return copy_values
 
+def cap_above(values: list[float], limit: float) -> list[float]:
+    copy_values = np.array(values, copy = True)
+    mask = copy_values > limit
+    copy_values[mask] = limit
+    return copy_values.tolist()
+
+def celsius_to_fahrenheit(values: list[float]) -> list[float]:
+    copy_values = np.array(values, copy=True)
+    for i in range(len(copy_values)):
+        copy_values[i] = copy_values[i] * 9 / 5 + 32
+    return copy_values.tolist()
+
 
 
