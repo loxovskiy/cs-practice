@@ -10,10 +10,10 @@ def vector_report(values: list[float]) -> dict:
     values = np.array(values, dtype = float)
     third = values[2]
     last = values[-1]
-    cut = values[2:6]
-    second = values[::2]
-    reverse = values[::-1]
-    return {'third': third,'last': last, 'cut': cut, 'second': second, 'reverse': reverse}
+    middle = values[2:6]
+    every_second = values[::2].tolist()
+    reversed = values[::-1].tolist()
+    return {'third': third,'last': last, 'middle': middle, 'every_second': every_second, 'reversed': reversed}
 
 def change_vector(values: list[float]) -> list[float]:
     copy_values = values.copy()
