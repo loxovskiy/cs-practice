@@ -5,7 +5,7 @@ def make_table(rows: int, columns: int) :
     return mat.tolist()
 
 def rectangle(matrix: list[list[float]], row_start: int, row_stop: int, column_start: int, column_stop: int) -> list[list[float]]:
-    mat = np.asarray(matrix)
+    arr = np.asarray(matrix)
     return arr[row_start:row_stop, column_start:column_stop].tolist()
 
 def replace_rectangle(matrix: list[list[float]], row_start: int, row_stop: int, column_start: int, column_stop: int, value: float) -> list[list[float]]:
@@ -17,7 +17,9 @@ def matrix_vector_product(matrix: list[list[float]], vector: list[float]) -> lis
     return (np.asanyarray(matrix) @ np.asarray(vector)).tolist()
 
 def matrix_multiply(left: list[list[float]], right: list[list[float]]) -> list[list[float]]:
-     return (np.asanyarray(right) @ np.asarray(left)).tolist()
+    A = np.asarray(left)
+    B = np.asarray(right)
+    return (A @ B).tolist()
 
 def transpose_matrix(matrix: list[list[float]]) -> list[list[float]]:
     return (np.asarray(matrix).T).tolist()
