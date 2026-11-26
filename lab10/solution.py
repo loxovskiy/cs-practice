@@ -12,3 +12,6 @@ def replace_rectangle(matrix: list[list[float]], row_start: int, row_stop: int, 
     mat = np.asarray(matrix, dtype=float).copy()
     mat[row_start:row_stop, column_start:column_stop] = value
     return mat.tolist()
+
+def matrix_vector_product(matrix: list[list[float]], vector: list[float]) -> list[float]:
+    return (np.asanyarray(matrix) @ np.asarray(vector)).tolist()
