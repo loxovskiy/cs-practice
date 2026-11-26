@@ -7,3 +7,8 @@ def make_table(rows: int, columns: int) :
 def rectangle(matrix: list[list[float]], row_start: int, row_stop: int, column_start: int, column_stop: int) -> list[list[float]]:
     mat = np.asarray(matrix)
     return arr[row_start:row_stop, column_start:column_stop].tolist()
+
+def replace_rectangle(matrix: list[list[float]], row_start: int, row_stop: int, column_start: int, column_stop: int, value: float) -> list[list[float]]:
+    mat = np.asarray(matrix, dtype=float).copy()
+    mat[row_start:row_stop, column_start:column_stop] = value
+    return mat.tolist()
